@@ -28,7 +28,7 @@ public class start : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.M))
         {
-            this.text3.GetComponent<Text>().text ="センサーモード";
+            this.text3.GetComponent<Text>().text ="Sensor mode";
             Score.mode2++;
             
         }
