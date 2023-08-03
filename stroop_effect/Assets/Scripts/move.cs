@@ -86,6 +86,29 @@ public class move : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (Score.mode==1){
+            if(Score.Score1!=0){
+                if(Score.Score1%5==0){
+                    zSpeed++;
+                }
+            }
+        }
+
+        if (Score.mode==2){
+            if(Score.Score2!=0){
+                if(Score.Score2%5==0){
+                    zSpeed++;
+                }
+            }
+        }
+        
+    }
+
+
+
+
     // シリアルポートを閉じる
     void OnApplicationQuit()
     {
@@ -94,4 +117,5 @@ public class move : MonoBehaviour
             serialPort.Close();
         }
     }
+
 }
